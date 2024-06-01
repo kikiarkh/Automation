@@ -1,3 +1,2 @@
 my_age = 28
-my_age = 31
-print(my_age)
+print(my_age + 3)
