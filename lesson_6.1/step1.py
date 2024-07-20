@@ -25,44 +25,34 @@ sleep(10)
 
 #дальше ошибка. Не понимаю как проверить цвет???
 
-zipcode = driver.find_element(By.CSS_SELECTOR, "#zip-code")
-print(zipcode.value_of_css_property("background-color"))
-assert zipcode == "rgba(248, 215, 218, 1)"
+color_zip = driver.find_element(By.CSS_SELECTOR, "#zip-code").value_of_css_property("background-color")
+assert color_zip == "rgba(248, 215, 218, 1)"
 
-first_name_color = driver.find_element(By.CSS_SELECTOR, "#first-name")
-print(first_name_color.value_of_css_property("background-color"))
+first_name_color = driver.find_element(By.CSS_SELECTOR, "#first-name").value_of_css_property("background-color")
 assert first_name_color == "rgba(209, 231, 221, 1)"
 
-last_name_color = driver.find_element(By.CSS_SELECTOR, "#last-name")
-print(last_name_color.value_of_css_property("background-color"))
+last_name_color = driver.find_element(By.CSS_SELECTOR, "#last-name").value_of_css_property("background-color")
 assert last_name_color == "rgba(209, 231, 221, 1)"
 
-address_color = driver.find_element(By.CSS_SELECTOR, "#address")
-print(address_color.value_of_css_property("background-color"))
+address_color = driver.find_element(By.CSS_SELECTOR, "#address").value_of_css_property("background-color")
 assert address_color == "rgba(209, 231, 221, 1)"
 
-email_color = driver.find_element(By.CSS_SELECTOR, "#e-mail")
-print(email_color.value_of_css_property("background-color"))
+email_color = driver.find_element(By.CSS_SELECTOR, "#e-mail").value_of_css_property("background-color")
 assert email_color == "rgba(209, 231, 221, 1)"
 
-phone_color = driver.find_element(By.CSS_SELECTOR, "#phone")
-print(phone_color.value_of_css_property("background-color"))
+phone_color = driver.find_element(By.CSS_SELECTOR, "#phone").value_of_css_property("background-color")
 assert phone_color == "rgba(209, 231, 221, 1)"
 
-city_color = driver.find_element(By.CSS_SELECTOR, "#city")
-print(city_color.value_of_css_property("background-color"))
+city_color = driver.find_element(By.CSS_SELECTOR, "#city").value_of_css_property("background-color")
 assert city_color == "rgba(209, 231, 221, 1)"
 
-country_color = driver.find_element(By.CSS_SELECTOR, "#country")
-print(country_color.value_of_css_property("background-color"))
+country_color = driver.find_element(By.CSS_SELECTOR, "#country").value_of_css_property("background-color")
 assert country_color == "rgba(209, 231, 221, 1)"
 
-Job_position_color = driver.find_element(By.CSS_SELECTOR, "#job-position")
-print(Job_position_color.value_of_css_property("background-color"))
+Job_position_color = driver.find_element(By.CSS_SELECTOR, "#job-position").value_of_css_property("background-color")
 assert Job_position_color == "rgba(209, 231, 221, 1)"
 
-company_color = driver.find_element(By.CSS_SELECTOR, "#company")
-print(company_color.value_of_css_property("background-color"))
+company_color = driver.find_element(By.CSS_SELECTOR, "#company").value_of_css_property("background-color")
 assert company_color == "rgba(209, 231, 221, 1)"
 
 
