@@ -23,8 +23,6 @@ driver.find_element(By.CSS_SELECTOR, "button[type=submit]").click()
 
 sleep(10)
 
-#дальше ошибка. Не понимаю как проверить цвет???
-
 color_zip = driver.find_element(By.CSS_SELECTOR, "#zip-code").value_of_css_property("background-color")
 assert color_zip == "rgba(248, 215, 218, 1)"
 
