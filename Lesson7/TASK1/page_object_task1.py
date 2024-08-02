@@ -7,9 +7,6 @@ from time import sleep
 import pytest 
 
 driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
-
-from Mine_Page import MinePage
-
 browser = webdriver.Chrome()
 Mine_Page = MinePage(browser)
 
