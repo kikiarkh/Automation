@@ -14,20 +14,20 @@ class Employee:
         return responce.json()
 
 #Добавить нового сотрудника
-    def get_new(self, token: str, body: json):
+    def create_new_employee(self, token: str, body: json):
         headers = {'x-client-token': token}
         resp = requests.post(self.url + '/employee',headers=headers, json=body)
         return resp.json()
     
 #Получить сотрудника по id
     def get_info(self, employer_id: int):
-        resp = requests.get(self.url + '/employee'+ str(employer_id))
+        resp = requests.get(self.url + '/employee/'+ str(employer_id))
         return resp.json()
 
 #Изменить информацию о сотруднике
     def change_info(self, token: str,  employer_id: int, body: json):
         headers = {'x-client-token': token}
-        resp = requests.patch(self.url + '/employee'+ employer_id, headers=headers, json=body)
+        resp = requests.patch(self.url + '/employee/'+ str(employer_id), headers=headers, json=body)
         return resp.json()
 
         
