@@ -8,9 +8,9 @@ class Employee:
         self.url = url
 
 #Получение списка сотрудников   
-    def det_list(self, company_id: int):
-        company = {'company': 'company_id'}
-        responce = requests.get(self.base_URL+'/employee', params=company)
+    def get_list(self, company_id: int):
+        company = {'companyId': company_id}
+        responce = requests.get(self.url + '/employee', params=company)
         return responce.json()
 
 #Добавить нового сотрудника
@@ -29,6 +29,8 @@ class Employee:
         headers = {'x-client-token': token}
         resp = requests.patch(self.url + '/employee/'+ str(employer_id), headers=headers, json=body)
         return resp.json()
+    
+
 
         
         

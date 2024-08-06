@@ -19,3 +19,8 @@ class Company:
         resp = requests.get(self.url + '/company', params=active_params)
         return resp.json()[-1]['id']
     
+    def create_new_company(self, token: str, body: json):
+        headers = {'x-client-token': token}
+        resp =requests.post(self.url+'/company',headers=headers, json=body)
+        return resp.json()
+    
